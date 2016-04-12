@@ -1,2 +1,0 @@
-# Algorithms
-cool algorithms implementations
