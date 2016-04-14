@@ -10,7 +10,7 @@ A *Partition* of $\Omega$ is a collection of nonempty subsets $A_1,...,A_n$ in $
 ## Combinatorics
 
 - Given $n$ objects, the nummber of different **permutations (without repetition)** of length $ r ≤ n $ is $$ n(n-1)(n-2)...(n-r+1) = \frac{n!}{(n-r)!} $$
-- Given $ n = \sum_{i=1}^{r} n_i$ objects of $r$ different types, where $n_i$ is the number of objects of type $i$ that are **indistinguishable** from one another, the number of **permutations (without repetition)** of the n objects is $$\frac{n!}{n_1!n_2!...n_r!}$$
+- Given $n = \sum_{i=1}^{r} n_i$ objects of $r$ different types, where $n_i$ is the number of objects of type $i$ that are **indistinguishable** from one another, the number of **permutations (without repetition)** of the n objects is $$\frac{n!}{n_1!n_2!...n_r!}$$
 - **Binomial coefficient** $$ \binom{n}{k} = \frac{n!}{k!(n-k)!} $$
 - the number of ways of choosing a set of $r$ objects from a set of $n$ distinct objects without repetition (and order does not matter) is $$ \binom{n}{r} = \frac{n!}{r!(n-r)!} $$ this is essentialy the same as the permutation (without repetition) except that one divides by the number of permutations of the r objects of $r$ since order does not matter.
 - The number of ways of distributing n distinct objects into $r$ distinct groups of size $n_1, ..., n_r$, where $n_1 + ... + n_r = n$, is $$\frac{n!}{n_1!n_2!...n_r!}$$ one actually does not care about the order in the groups, that's why one divides by the number of permutations in each group.
@@ -37,7 +37,7 @@ First align $3-1$ delimiters and the 6 balls: $$ ||oooooo $$ Now the number of p
 
 ###Inclusion-exclusion formulae
 
-- $P(A_1 \cup A_2\cup A_3) = $
+- $P(A_1 \cup A_2\cup A_3) =$
 $P(A_1) + P(A_2) + P(A_3) - P(A_1 \cap A_2) - P(A_1 \cap A_3) - P(A_2 \cap A_3)+ P(A_1 \cap A_2 \cap A_3)$
 
 - first add all the "unique" probabilities, then substract all the possible pairs, add all the possible triples, substract all the possible quadruplets, etc. (always alternate signs).
@@ -82,10 +82,9 @@ The **Probability Mass Function (PMF)** of a discrete random variable $X$ is $$f
 1. $f_X(x) ≥ 0$, and it is only positive for $x \in D_X$, where $D_X$ is the image of the function $X$, i.e., the *support* of $f_X$;
 2. The total probability is equal to 1.
 
-###Distributions
---
+### Distributions
 
-####Binomial random variable
+#### Binomial random variable
 
 A *binomial* random variable $X$ has PMF $$f(x) = \binom{n}{x}p^x(1-p)^{n-x},\ x= 0,1,...,n,\ n \in \mathbb{N},\ 0 ≤ p ≤ 1$$ With $n=1$, this is a Bernoulli variable.
 
@@ -306,17 +305,20 @@ If straightt line of 45° angle: GOOD distribution.
 
 The (joint) cumulative distribution function of $(X,Y)$ is $$F_{X,Y}(x,y) = P(X≤x, Y≤y) = \int_{-\infty}^{x}\int_{-\infty}^{y} f_{X,Y}(u,v)dudv,\ (x,y) \in \mathbb{R}^2$$ and this implies that $$f_{X,Y}(x,y) = \frac{\partial^2}{\partial x \partial y}F_{X,Y}(x,y)$$
 
-####Marginal probability mass/density function
+#### Marginal probability mass/density function
+
 The marginal probability mass/density function of $X$ is $$f_X(x) = \begin{cases} \int_{-\infty}^{\infty}f_{X,Y}(x,y)dy, & \mbox{continuous case} , \\ 
 \sum_{y}f_{X,Y}(x,y), & \mbox{discrete case} \end{cases}$$
-####Conditional probability mass/density function
+
+#### Conditional probability mass/density function
+
 The conditional probability mass/density function of Y given X is $$f_{Y|X}(y|x) = \frac{f_{X,Y}(x,y)}{f_X(x)},\ y \in \mathbb{R}$$ Analogous for cumulative distribution. We can extend all these definitions to n random variables.
 
-####Multinomial distribution
+#### Multinomial distribution
 
 The random variable $(X_1, ..., X_k)$ has the multinomial distribution of denominator m and probabilities $(p_1, ..., p_k)$ if its mass function is $$f(x_1,..., x_k) = \frac{m!}{x_1!x_2!...x_k!}p_1^{x_1}p_2^{x_2}...p_k^{x_k},\ x_1,...,x_k \in \{0,...,m\}, \sum_{j=1}^kx_j = m$$
 
-####Multivariable independence
+#### Multivariable independence
 
 Random variables $X$,$Y$ defined on the same probability space are independent if $$P(X \in \mathcal{A}, Y \in \mathcal{B}) = P(X \in \mathcal{A})P(Y \in \mathcal{B})$$ $$F_{X,Y}(x,y) = ... = F_X(x)F_Y(y)$$ $$f_{X,Y}(x,y) = f_X(x)f_Y(y)$$ If $X$, $Y$ are independent, then for all $x$ such that $f_X(x) > 0$$$f_{Y|X}(y|x)=\frac{f_{X,Y}(x,y)}{f_X(x)}= \frac{f_X(x)f_Y(y)}{f_X(x)}$$
 
