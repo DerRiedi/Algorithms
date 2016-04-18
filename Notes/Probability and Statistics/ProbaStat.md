@@ -270,7 +270,7 @@ For most continuous random variables, $x_p$ is unique and equals $x_p = F^{-1}(p
 
 Let $g : \mathbb{R} \to \mathbb{R}$ be a function and $\mathcal{B} \subset \mathbb{R}$ any subset of $\mathbb{R}$. Then $g^{-1}(\mathcal{B}) \subset \mathbb{R}$ is the set for which $g\{g^{-1}(\mathcal{B})\} = \mathcal{B}$.
 
-Let $Y = g(X)$ be a random variable and $\mathcal{B}_y = (-\infty, y]$. Then $$F_Y(y) = P(Y ≤ y) = \begin{cases} \int_{g^{-1}(\mathcal{B}_y)}f_X(x)dx, & \mbox{X continuous} , \\ 
+Let $Y = g(X)$ be a random variable and $\mathcal{B}_y = (-\infty, y]$. Then $$F_Y(y) = P(Y \leq y) = \begin{cases} \int_{g^{-1}(\mathcal{B}_y)}f_X(x)dx, & \mbox{X continuous} , \\ 
 \sum_{x \in g^{-1}(\mathcal{B}_y)}f_X(x), & \mbox{X discrete,} \end{cases}$$ where $g^{-1}(\mathcal{B}_y) = \{x \in \mathbb{R}: g(x) ≤ y \}$. When g is monotone increasing or decreasing and has inverse $g^{-1}$, then $$f_Y(y) = \left|\frac{dg^{-1}(y)}{dy}\right|f_X\{g^{-1}(y)\}, \ y \in \mathbb{R}.$$ 
 
 ####Normal Distribution or Gaussian Distribution
